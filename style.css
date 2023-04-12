@@ -54,6 +54,14 @@ img:hover{
 	-webkit-transition: all .4s ease-in-out;
 }
 
+.cabecalho a{
+	color: white;
+	text-decoration: underline;
+}
+
+.cabecalho a:after{
+	color: white;
+}
 
 .cabecalho pm{
 	color: green;
