@@ -78,3 +78,9 @@ img:hover{
 .cabecalho pp{
 	color: orange;
 }
+
+.cabecalho creditos{
+	color: white;
+	font-size: px;
+	opacity: 50%;
+}
