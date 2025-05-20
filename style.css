@@ -1,86 +1,36 @@
-body{
+/* Pré-Definição Geral */
+body {
 	background-color: black;
 	color: white;
 	font-family: "Times New Roman", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-x: hidden;
 }
 
 .todososjogos{
 	margin: auto;
-	width: 90%;
 	padding: 10px;
+	transform: translateX(1%);
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
-.jogom{
-	width: 150px;
-	height: 150px;
-	border: 4px solid green;
-	margin: 10px;
-	float: left;
-}
-
-.jogoz{
-	width: 150px;
-	height: 150px;
-	border: 4px solid blue;
-	margin: 10px;
-	float: left;
-}
-
-.jogod{
-	width: 150px;
-	height: 150px;
-	border: 4px solid red;
-	margin: 10px;
-	float: left;
-}
-
-.jogop{
-	width: 150px;
-	height: 150px;
-	border: 4px solid orange;
-	margin: 10px;
-	float: left;
-}
-
-img{
+img {
 	width: 100%;
-	height: 100%;
-	opacity: 70%;
-	-webkit-transition: all .4s ease-in-out;
+	height: auto;
+	border-radius: 10px;
+	transition: transform 0.2s;
+	display: block;
+	margin: 0 auto;       
 }
 
-img:hover{
-	opacity: 100%;
-	-webkit-transition: all .4s ease-in-out;
+img:hover {
+	transform: scale(1.05);
 }
 
-.cabecalho a{
-	
-	text-decoration: underline;
-	color: white;
-	
-	
-    /*background-image: linear-gradient(45deg, yellow, darkorange);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;*/
-}
-
-.cabecalho .pixons a{
-	
-	text-decoration: underline;
-	animation: colorpix infinite 2s;
-	color: white;
-	
-	
-    /*background-image: linear-gradient(45deg, yellow, darkorange);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;*/
-}
-
+/* Cabeçalho */
 @keyframes colorpix{
 	0%
 	{
@@ -113,6 +63,33 @@ img:hover{
 	}
 }
 
+.cabecalho a{
+	
+	text-decoration: underline;
+	color: white;
+	
+	
+    /*background-image: linear-gradient(45deg, yellow, darkorange);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;*/
+}
+
+.cabecalho .pixons a{
+	
+	text-decoration: underline;
+	animation: colorpix infinite 2s;
+	color: white;
+	
+	
+    /*background-image: linear-gradient(45deg, yellow, darkorange);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;*/
+}
+
 .cabecalho a:after{
 	color: white;
 }
@@ -134,7 +111,229 @@ img:hover{
 }
 
 .cabecalho creditos{
+	color: gray;
+}
+
+/* Jogos (JOGANDO) */
+.emjogo{
+	background-color: black;
 	color: white;
-	font-size: px;
-	opacity: 50%;
+	text-align: center;
+	margin: 40px auto 20px;
+	width: 90%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.emjogotitulo{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	float: left;
+	color: #73ff00;
+}
+
+.emjogolista{
+	display: flex;
+	gap: 10px;
+	overflow-x: auto;
+	padding: 10px;
+	justify-content: left;
+	transform: translateX(1%);
+}
+
+.emjogo p{
+}
+
+.jogom {
+	flex: 0 0 auto;
+	width: 120px;
+}
+
+/* Jogos (ZERADOS) */
+
+.zerados{
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: 40px auto 20px;
+	width: 90%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.zeradostitulo{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	float: left;
+	color: #03b1fc;
+}
+
+.zeradoslista{
+	display: flex;
+	gap: 10px;
+	overflow-x: auto;
+	padding: 10px;
+	justify-content: left;
+	transform: translateX(1%);
+}
+
+.zerados p{
+}
+
+.jogoz {
+	flex: 0 0 auto;
+	width: 120px;
+}
+
+/* Jogos (DROPADOS) */
+
+.dropados{
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: 40px auto 20px;
+	width: 90%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.dropadostitulo{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	float: left;
+	color: #e61927;
+}
+
+.dropadoslista{
+	display: flex;
+	gap: 10px;
+	overflow-x: auto;
+	padding: 10px;
+	justify-content: left;
+	transform: translateX(1%);
+}
+
+.dropados p{
+}
+
+.jogod {
+	flex: 0 0 auto;
+	width: 120px;
+}
+
+/* Jogos (PENDENTES) */
+
+.pendentes{
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: 40px auto 20px;
+	width: 90%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.pendentestitulo{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	float: left;
+	color: #fce10f;
+}
+
+.pendenteslista{
+	display: flex;
+	gap: 10px;
+	overflow-x: auto;
+	padding: 10px;
+	justify-content: left;
+	transform: translateX(1%);
+}
+
+.pendentes p{
+}
+
+.jogop {
+	flex: 0 0 auto;
+	width: 120px;
+}
+
+/* Jogos (GOTY) */
+
+.goty{
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: 0px auto;
+	width: 90%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.gotytitulo{
+	color: darkorange;
+}
+
+.gotylistascroll{
+	overflow-x: auto;
+}
+
+.gotylista{
+	display: inline-flex;
+	overflow-x: auto;
+	white-space: nowrap;	
+	margin: 0 auto;
+	gap: 10px;
+	overflow-x: auto;
+	padding: 10px;
+	justify-content: center;
+}
+
+.goty p{
+}
+
+.jogogoty {
+	flex: 0 0 auto;
+	width: 120px;
+	text-align: center;
+}
+
+/* Jogos (Favoritos) */
+
+.favoritos{
+	background-color: black;
+	text-align: center;
+	margin: 0px auto;
+	width: 90%;
+	padding: 20px;
+	box-sizing: border-box;
+	color: white;
+}
+
+.favoritostitulo{
+	color: white;
+}
+
+.favoritoslistascroll{
+	overflow-x: auto;
+}
+
+.favoritoslista{
+	display: inline-flex;
+	overflow-x: auto;
+	white-space: nowrap;	
+	margin: 0 auto;
+	gap: 10px;
+	overflow-x: auto;
+	padding: 10px;
+	justify-content: center;
+	animation: colorpix infinite 2s;
+}
+
+.favoritos p{
+}
+
+.jogofavoritos {
+	flex: 0 0 auto;
+	width: 120px;
+	text-align: center;
 }
