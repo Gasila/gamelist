@@ -123,13 +123,16 @@ img:hover {
 	width: 90%;
 	padding: 20px;
 	box-sizing: border-box;
+	box-sizing: border-box;
+	border: 2px solid #24d654;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #24d654;
 }
 
 .emjogotitulo{
-	margin-top: 50px;
-	margin-bottom: 10px;
+	margin: 0px;
 	float: left;
-	color: #73ff00;
+	color: #24d654;
 }
 
 .emjogolista{
@@ -159,10 +162,13 @@ img:hover {
 	width: 90%;
 	padding: 20px;
 	box-sizing: border-box;
+	border: 2px solid #03b1fc;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #03b1fc;
 }
 
 .zeradostitulo{
-	margin-top: 50px;
+	margin: 0px;
 	margin-bottom: 10px;
 	float: left;
 	color: #03b1fc;
@@ -195,10 +201,13 @@ img:hover {
 	width: 90%;
 	padding: 20px;
 	box-sizing: border-box;
+	border: 2px solid #e61927;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #e61927;
 }
 
 .dropadostitulo{
-	margin-top: 50px;
+	margin: 0px;
 	margin-bottom: 10px;
 	float: left;
 	color: #e61927;
@@ -231,10 +240,13 @@ img:hover {
 	width: 90%;
 	padding: 20px;
 	box-sizing: border-box;
+	border: 2px solid #fce10f;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #fce10f;
 }
 
 .pendentestitulo{
-	margin-top: 50px;
+	margin: 0px;
 	margin-bottom: 10px;
 	float: left;
 	color: #fce10f;
