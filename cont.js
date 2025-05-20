@@ -16,4 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (pz) pz.textContent = `Zerados [${zerados}]`;
   if (pd) pd.textContent = `Dropados [${dropados}]`;
   if (pp) pp.textContent = `Pendentes [${pendentes}]`;
+
+  // Soma total
+  const total = jogando + zerados + dropados + pendentes;
+
+  // Atualiza o número total no <span id="total">
+  const totalSpan = document.getElementById("total");
+  if (totalSpan) totalSpan.textContent = total;
 });
