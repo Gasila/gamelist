@@ -13,7 +13,7 @@ body {
 	margin: auto;
 	padding: 10px;
 	transform: translateX(1%);
-	max-width: 100%;
+	width: 100%;
 	box-sizing: border-box;
 }
 
@@ -28,6 +28,15 @@ img {
 
 img:hover {
 	transform: scale(1.05);
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Cabeçalho */
@@ -327,6 +336,7 @@ img:hover {
 
 .favoritoslistascroll{
 	overflow-x: auto;
+	white-space: nowrap;
 }
 
 .favoritoslista{
@@ -340,7 +350,6 @@ img:hover {
 	justify-content: center;
 	animation: colorpix infinite 2s;
 }
-
 .favoritos p{
 }
 

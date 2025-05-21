@@ -24,12 +24,13 @@
 		<br>
 		
 		<center><h2>[Atualizada por último em: 20 de Maio de 2025]</h2></center>
+		<input type="text" id="searchInput" placeholder="Buscar jogos..." onkeyup="filtrarJogos()" />
 		
 		<div class="todososjogos">
 		
 		<!-- JOGANDO NO MOMENTO -->
 		<div class="emjogo" id="s1">
-			<h2 class="emjogotitulo"><pm>Jogando [0]</pm></h2>
+			<h2 class="emjogotitulo"><span id="pm">Jogando [0]</span></h2><br><br><br>
 			<div class="emjogolista">
 				<div class="jogom"><img src="./games/expedition33.jpg" title="Clair Obscur: Expedition 33" /><p>Clair Obscur: Expedition 33</p></div>
 				<div class="jogom"><img src="./games/eldenring.jpg" title="Elden Ring" /><p>Elden Ring</p></div>
@@ -41,11 +42,9 @@
 		
 		<!-- JOGOS ZERADOS -->
 		<div class="zerados" id="s2">
-			<h2 class="zeradostitulo"><pz>Zerados [0]</pz></h2>
+			<h2 class="zeradostitulo"><span id="pz">Zerados [0]</span></h2><br><br><br>
 			<div class="zeradoslista">
-				<div class="jogoz"><img src="./games/198x.jpg" title="198X" /><p>198X</p></div>
-				
-				
+				<div class="jogoz"><img src="./games/198x.jpg" title="198X" /><p>198X</p></div>				
 				<div class="jogoz"><img src="./games/abfoc.jpg" title="A Building Full of Cats" /><p>A Building Full of Cats</p></div>
 				<div class="jogoz"><img src="./games/acfoc.jpg" title="A Castle Full of Cats" /><p>A Castle Full of Cats</p></div>
 				<div class="jogoz"><img src="./games/lendadoheroi.jpg" title="A Lenda do Herói" /><p>A Lenda do Herói</p></div>
@@ -273,13 +272,12 @@
 				<div class="jogoz"><img src="./games/yasukesimulator.jpg" title="Yasuke Simulator" /><p>Yasuke Simulator</p></div>
 				<div class="jogoz"><img src="./games/yhtbth.jpg" title="You Have to Burn the Rope" /><p>You Have to Burn the Rope</p></div>
 				<div class="jogoz"><img src="./games/yugiohgxtagforce.jpg" title="Yu-Gi-Oh! GX: The Beginning of Destiny" /><p>Yu-Gi-Oh! GX: The Beginning of Destiny</p></div>
-		
 			</div>
 		</div>
 		
 		<!-- JOGOS DROPADOS -->
 		<div class="dropados" id="s3">
-			<h2 class="dropadostitulo"><pd>Dropados [0]</pd></h2>
+			<h2 class="dropadostitulo"><span id="pd">Dropados [0]</span></h2><br><br><br>
 			<div class="dropadoslista">
 				<div class="jogod"><img src="./games/ahatintime.jpg" title="A Hat in Time" /><p>A Hat in Time</p></div>
 				<div class="jogod"><img src="./games/axiomverge.jpg" title="Axiom Verge" /><p>Axiom Verge</p></div>
@@ -328,7 +326,7 @@
 
 		<!-- JOGOS PENDENTES -->
 		<div class="pendentes" id="s4">
-			<h2 class="pendentestitulo"><pp>Pendentes [0]</pp></h2>
+			<h2 class="pendentestitulo"><span id="pp">Pendentes [0]</span></h2><br><br><br>
 			<div class="pendenteslista">
 				<div class="jogop"><img src="./games/actraiser.jpg" title="ActRaiser" /><p>ActRaiser</p></div>
 				<div class="jogop"><img src="./games/actraiser2.jpg" title="ActRaiser 2" /><p>ActRaiser 2</p></div>
@@ -399,7 +397,7 @@
 				<div class="jogofavoritos"><img src="./games/themessenger.jpg" title="The Messenger" /><p>The Messenger</p></div>
 			</div></div>
 		</div>
-		
+
 	</body>
 	
 	

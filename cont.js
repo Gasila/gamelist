@@ -1,26 +1,54 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Conta os jogos em cada categoria
-  const jogando = document.querySelectorAll(".emjogo .jogom").length;
-  const zerados = document.querySelectorAll(".zerados .jogoz").length;
-  const dropados = document.querySelectorAll(".dropados .jogod").length;
-  const pendentes = document.querySelectorAll(".pendentes .jogop").length;
+window.onload = function () {
+    contarJogos();
+};
 
-  // Seleciona os elementos <pm>, <pz>, <pd> e <pp> dentro do <h2>
-  const pm = document.querySelector("h2 pm");
-  const pz = document.querySelector("h2 pz");
-  const pd = document.querySelector("h2 pd");
-  const pp = document.querySelector("h2 pp");
+// Contador atualizado para contar apenas os jogos visíveis
+function contarJogos() {
+    const seções = [
+        { id: 's1', classe: 'jogom', span: 'pm' },
+        { id: 's2', classe: 'jogoz', span: 'pz' },
+        { id: 's3', classe: 'jogod', span: 'pd' },
+        { id: 's4', classe: 'jogop', span: 'pp' }
+    ];
 
-  // Atualiza o conteúdo com os novos números
-  if (pm) pm.textContent = `Jogando [${jogando}]`;
-  if (pz) pz.textContent = `Zerados [${zerados}]`;
-  if (pd) pd.textContent = `Dropados [${dropados}]`;
-  if (pp) pp.textContent = `Pendentes [${pendentes}]`;
+    let total = 0;
 
-  // Soma total
-  const total = jogando + zerados + dropados + pendentes;
+    seções.forEach(({ id, classe, span }) => {
+        const jogos = document.querySelectorAll(`#${id} .${classe}`);
+        let visiveis = 0;
 
-  // Atualiza o número total no <span id="total">
-  const totalSpan = document.getElementById("total");
-  if (totalSpan) totalSpan.textContent = total;
-});
+        jogos.forEach(jogo => {
+            // Verifica se o jogo está visível
+            if (jogo.style.display !== 'none') {
+                visiveis++;
+            }
+        });
+
+        // Atualiza o texto da seção com o número de visíveis
+        const nomeSecao = document.getElementById(span).textContent.split(" ")[0];
+        document.getElementById(span).textContent = `${nomeSecao} [${visiveis}]`;
+        total += visiveis;
+    });
+
+    // Atualiza o total
+    document.getElementById('total').textContent = total;
+}
+
+// Função de busca por título (usando atributo title)
+function filtrarJogos() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const todosJogos = document.querySelectorAll(".jogod, .jogom, .jogop, .jogoz");
+
+    todosJogos.forEach(jogo => {
+        const img = jogo.querySelector("img");
+        const titulo = img.getAttribute("title").toLowerCase();
+
+        if (titulo.includes(input)) {
+            jogo.style.display = "";
+        } else {
+            jogo.style.display = "none";
+        }
+    });
+
+    contarJogos(); // Atualiza contadores após o filtro
+}
