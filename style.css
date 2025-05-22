@@ -6,7 +6,24 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	overflow-x: hidden;
+	margin: 0;
+	min-height: 100vh;
+	padding: 40px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1500px;
+	background-color: black;
+	padding: 50px;
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+	border: 1px solid white;
+	background-image: url('./footage/wall.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .todososjogos{
@@ -125,7 +142,7 @@ img:hover {
 
 /* Jogos (JOGANDO) */
 .emjogo{
-	background-color: black;
+	/*background-color: black;*/
 	color: white;
 	text-align: center;
 	margin: 40px auto 20px;
@@ -164,7 +181,7 @@ img:hover {
 /* Jogos (ZERADOS) */
 
 .zerados{
-	background-color: black;
+	/*background-color: black;*/
 	color: white;
 	text-align: center;
 	margin: 40px auto 20px;
@@ -203,7 +220,7 @@ img:hover {
 /* Jogos (DROPADOS) */
 
 .dropados{
-	background-color: black;
+	/*background-color: black;*/
 	color: white;
 	text-align: center;
 	margin: 40px auto 20px;
@@ -242,7 +259,7 @@ img:hover {
 /* Jogos (PENDENTES) */
 
 .pendentes{
-	background-color: black;
+	/*background-color: black;*/
 	color: white;
 	text-align: center;
 	margin: 40px auto 20px;
@@ -281,7 +298,7 @@ img:hover {
 /* Jogos (GOTY) */
 
 .goty{
-	background-color: black;
+	/*background-color: black;*/
 	color: white;
 	text-align: center;
 	margin: 0px auto;
@@ -321,13 +338,13 @@ img:hover {
 /* Jogos (Favoritos) */
 
 .favoritos{
-	background-color: black;
+	/*background-color: black;*/
+	color: white;
 	text-align: center;
 	margin: 0px auto;
 	width: 90%;
 	padding: 20px;
 	box-sizing: border-box;
-	color: white;
 }
 
 .favoritostitulo{
@@ -357,4 +374,47 @@ img:hover {
 	flex: 0 0 auto;
 	width: 120px;
 	text-align: center;
+}
+
+/* Barra de Pesquisa */
+
+#searchInput {
+	width: 100%;
+	max-width: 400px;
+	padding: 10px 40px 10px 16px;
+	border: 2px solid #444;
+	border-radius: 30px;
+	font-size: 16px;
+	background-color: #1e1e1e;
+	color: white;
+	outline: none;
+	transition: 0.3s ease;
+	background-image: url('./footage/lupa.png');
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: right 12px center;
+}
+
+#searchInput:focus {
+	border-color: #00ffd5;
+	box-shadow: 0 0 5px #00ffd5;
+}
+
+/* Botão Topo */
+
+.topasso {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-decoration: bold;
+}
+
+.topasso a {
+  color: white;
+  text-decoration: none;
+  display: block;
 }
