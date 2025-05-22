@@ -389,15 +389,15 @@ img:hover {
 	color: white;
 	outline: none;
 	transition: 0.3s ease;
-	background-image: url('./footage/lupa.png');
+	background-image: url('./footage/lupa2.png');
 	background-size: 20px;
 	background-repeat: no-repeat;
 	background-position: right 12px center;
 }
 
 #searchInput:focus {
-	border-color: #00ffd5;
-	box-shadow: 0 0 5px #00ffd5;
+	border-color: white;
+	box-shadow: 0 0 15px white;
 }
 
 /* Botão Topo */
@@ -411,6 +411,7 @@ img:hover {
   border-radius: 50%;
   font-size: 24px;
   text-decoration: bold;
+  filter: grayscale(100%) contrast(2);
 }
 
 .topasso a {
